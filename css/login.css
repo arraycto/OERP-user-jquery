@@ -1,0 +1,772 @@
+body,
+div,
+li,
+ul,
+span,
+form,
+input,
+label {
+
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    height: 40px ;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1595989970803');
+    /* IE9 */
+    src: url('iconfont.eot?t=1595989970803#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+        url('iconfont.woff?t=1595989970803') format('woff'),
+        url('iconfont.ttf?t=1595989970803') format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+        url('iconfont.svg?t=1595989970803#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 手机 */
+.icon-shouji:before {
+    content: "\e75c";
+}
+
+/* 钥匙 */
+.icon-yuechi:before {
+    content: "\e602";
+}
+
+/* 标签 */
+.icon-icon-test:before {
+    content: "\e641";
+}
+
+/* 线 */
+.icon-xiantiao-line:before {
+    content: "\e7ce";
+}
+
+/* 勾 */
+.icon-gou:before {
+    content: "\e611";
+}
+
+/* 1 */
+.icon-1_round_solid:before {
+    content: "\e64e";
+}
+
+/* 2 */
+.icon-2_round_solid:before {
+    content: "\e64f";
+}
+
+/* 3 */
+.icon-3_round_solid:before {
+    content: "\e650";
+}
+
+/* 4 */
+.icon-4_round_solid:before {
+    content: "\e651";
+}
+
+.icon-sanjiaoxing:before {
+    content: "\e6e6";
+}
+
+.icon-xiangshang:before {
+    content: "\e607";
+}
+
+.icon-cheng:before {
+    content: "\e60f";
+}
+
+/* 退出 */
+.icon-tuichu:before {
+    content: "\e612";
+}
+
+/* 注册 */
+.icon-zhuce:before {
+    content: "\e6b5";
+}
+
+/* 放大镜 */
+.icon-fangdajing:before {
+    content: "\e637";
+}
+
+/* 登录 */
+.icon-denglu:before {
+    content: "\e66b";
+}
+
+/* 首页 */
+.icon-daohangshouye:before {
+    content: "\e605";
+}
+/* 眼睛 */
+.icon-yanjing:before {
+    content: "\e6ce";
+}
+
+input {
+    border-radius: 3px;
+}
+
+.max {
+    width: 100%;
+    position: absolute;
+    background-color: #F8FAFC;
+}
+
+/* 导航栏 */
+.top .layui-nav .hide {
+    display: none;
+}
+
+.top {
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+}
+
+.layui-nav {
+    height: 80px;
+    margin: 0 auto;
+    background-color: #fff !important;
+    /* position: absolute; */
+    color: #333736;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navlogo {
+    width: 133px;
+    height: 58px;
+    margin-top: 10px;
+    padding-right: 60px;
+}
+
+.layui-nav .login-homePage {
+    position: absolute;
+    left: 1700px;
+    top: 0px;
+}
+
+.layui-nav .login-homePageC {
+    position: absolute;
+    left: 1708px;
+    top: 27px;
+    background-image: url(../img/route7.png);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.layui-nav .login-homePageB {
+    position: absolute;
+    left: 1780px;
+    top: 4px;
+}
+
+.layui-nav .login-homePageB .myname {
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    background-repeat: round;
+    background-size: contain;
+    margin-top: 5px;
+    /* border-radius: 100%; */
+}
+
+.layui-nav .login-homePageA {
+    position: absolute;
+    left: 1780px;
+    top: 0px;
+}
+
+.layui-nav .successA {
+    margin-left: 800px;
+}
+
+.layui-nav .layui-nav-item .navigationBarA::before {
+    content: "\e605";
+    padding-right: 5px;
+}
+
+.layui-nav .layui-nav-item .navigationBarB::before {
+    content: "\e66b";
+    padding-right: 5px;
+}
+
+.layui-nav .layui-nav-item .navigationBarC::before {
+    content: "\e6b5";
+    padding-right: 5px;
+}
+
+.layui-nav .layui-nav-item .navigationBarD::before {
+    content: "\e612";
+    padding-right: 5px;
+}
+
+.layui-form {
+    height: 45px;
+    width: 400px;
+    top: -10px;
+    position: relative;
+    left: 1252px;
+}
+
+.layui-form .layui-input {
+    height: 45px;
+    width: 400px;
+    background-color: rgba(233, 233, 233, 1);
+    color: #A6A6A6;
+    padding-left: 30px;
+    border-radius: 4px;
+}
+
+.navigationB {
+    margin-top: -50px;
+}
+
+.div-bor .iconfontA>img {
+    position: absolute;
+    /* border-corner-image: url(); */
+    top: 12px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    /* color: #545C63; */
+
+}
+
+.div-bor .iconfontA img:hover {
+    /* color:  rgb(95, 184, 120); */
+}
+
+.layui-nav .layui-nav-item a:hover {
+    color: #154cc8;
+}
+
+/* 导航栏--注册 */
+#registrationPanel {
+    height: 480px;
+}
+
+#registrationPanelB .layui-progress .layui-bg-red {
+    color: rgb(95, 184, 120);
+}
+
+.login-inputA {
+    margin: 10px 0px -30px 30px;
+    width: 310px;
+}
+
+.login-inputA:nth-child(1) {
+    margin: 50px 0px 10px 30px
+}
+
+.login-form .login-inputA .login-inputP {
+    margin-top: 17px;
+}
+
+.login-form .login-inputA .listInputA {
+    margin-bottom: 15px;
+}
+
+.login-form .login-inputA #canvas {
+    width: 82px;
+    height: 38px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+    position: relative;
+    left: 217px;
+    top: 19px;
+}
+
+.login-form .login-inputA .codeFalse,
+.login-form .login-inputA .codeFalseA,
+.login-form .login-inputA .codeFalseB {
+    color: red;
+    font-size: 10px;
+    position: absolute;
+    width: 118px;
+    opacity: 0;
+}
+
+.login-form .login-inputA .codeFalse {
+    left: 110px;
+    top: 210px;
+}
+
+.login-form .login-inputA .codeFalseA {
+    top: 276px;
+    left: 110px;
+}
+
+.login-form .login-inputA .codeFalseB {
+    top: 274px;
+    left: 73px;
+}
+
+
+.login-form .login-input .codeFalseC {
+    top: 378px;
+    left: 96px;
+}
+
+.login-form .login-input .codeFalseD {
+    top: 379px;
+    left: 83px;
+}
+
+.login-form .login-input .codeFalseE {
+    top: 447px;
+    left: 83px;
+}
+
+.login-form>span {
+    font-size: 12px;
+    margin-left: 93px;
+    color: gray;
+}
+
+#registrationPanel .lics span,
+#registrationPanelA .lics span,
+#registrationPanelB .lics span {
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+}
+
+#registrationPanelA input {
+    width: 250px;
+    margin: 10px 0 0 20px;
+}
+
+#registrationPanelA .login-input .list-inputA {
+    margin-top: 40px;
+}
+
+.btnSendCodeA {
+    width: 80px;
+    height: 35px;
+    background-color: #fff;
+    border: none;
+    position: relative;
+    left: 218px;
+    top: -41px;
+    cursor: pointer;
+}
+
+#canvas {
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+}
+
+.btnSendCodeA:hover,
+.btnSendCodeB:hover,
+.btnSendCodeD:hover {
+    color: rgb(95, 184, 120);
+}
+
+.layui-form-item {
+    height: 40px;
+    line-height: 40px;
+    /* margin: 0 auto;  */
+    /* color: #e45fa2; */
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.layui-form-item .layui-input-block {
+    /* padding-left: 20px; */
+    /* line-height: 40px; */
+    margin-left: 95px;
+
+}
+
+/* .layui-progress .layui-bg-red{
+        margin-bottom: 20px;
+    } */
+.layui-form-item label {
+    margin-left: 5px;
+}
+
+.layui-form-item label a {
+    color: rgb(95, 184, 120);
+}
+
+.login-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #000000;
+    /* filter: alpha(opacity=30);
+      -moz-opacity: 0.3;
+      -khtml-opacity: 0.3; */
+    opacity: 0.5;
+    display: none;
+}
+
+.loginSpan {
+    text-align: center;
+    padding-top: 130px;
+}
+
+.loginSpan span:nth-child(1) {
+    font-size: 30px;
+}
+
+.loginSpan span:nth-child(3) {
+    color: rgb(95, 184, 120);
+}
+
+/* 头部 */
+.hd {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.max .hdA {
+    width: 100%;
+}
+
+/* 轮播图 */
+.hd .layui-carousel {
+    margin: 146px auto 0 auto;
+    height: 467px !important;
+}
+
+.layui-carousel img {
+    width: 1400px;
+    height: 500px;
+}
+
+/* 相关考试 */
+.hd-test {
+    height: 30px;
+    width: 1400px;
+    /* overflow: hidden; */
+    padding: 10px;
+    color: rgba(51, 55, 54, 1);
+    margin-top: 45px;
+    border-radius: 3px;
+}
+
+.hd-test span:nth-child(1) {
+    width: 120px;
+    height: 42px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    line-height: 42px;
+}
+
+.hd-test span:nth-child(2) {
+    width: 80px;
+    height: 28px;
+    font-size: 20px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    line-height: 28px;
+    position: relative;
+    left: 1130px;
+}
+
+.hd-test .emptyKeyword {
+    color: rgba(51, 55, 54, 1);
+
+}
+
+.hd-test .route3 {
+    height: 18px;
+    width: 10px;
+    margin-top: -4px;
+    margin-left: 15px;
+}
+
+.hd-mainA {
+    margin-top: 50px;
+    width: 1400px;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+
+}
+
+/* .hd-mainA .pullUpFrame {
+    overflow: hidden;
+}
+
+.hd-mainA .pullUpFrame,
+.hd-mainA .pullUpFrame img {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 2px;
+    border-bottom: #393D49 solid 1px;
+} */
+
+.hd-mainA .testModular {
+    width: 311px;
+    height: 250px;
+    /* background-color: #fff; */
+    border-radius: 3px;
+}
+
+.hd-mainA .testModular:hover {
+    /* box-shadow: 0 0 10px rgba(153, 153, 153, 0.3); */
+}
+
+.hd-mainA .testModular img {
+    width: 311px;
+    height: 171px;
+}
+
+.hd-mainA .testModular .pullUpA {
+    height: 144px;
+    width: 311px;
+}
+
+.hd-mainA .pullUppA {
+    padding-left: 20px;
+    width: 301px;
+    height: 40px;
+    font-size: 20px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    line-height: 28px;
+    color: rgba(51, 55, 54, 1);
+}
+.loginbox{
+    width: 311px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.hd-mainA .pullUpA .loginPrice {
+    height: 20px;
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(102, 102, 102, 1);
+    padding-left: 20px;
+}
+
+.hd-mainA .pullUpA .logini {
+    height: 17px;
+    font-size: 12px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 17px;
+    color: rgba(166, 166, 166, 1);
+    font-style: normal;
+}
+
+.hd-mainA .pullUpA .logini img {
+    width: 12px;
+    height: 12px;
+    margin-top: -4px;
+}
+
+.hd-mainA .pullUppB {
+    color: #ccc;
+    font-size: 13px;
+    padding-left: 20px;
+    line-height: 30px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    /* position: relative;
+    top: 330px;
+    left: 20px; */
+}
+
+.testModular .pullUpB {
+    width: 385px;
+    height: 60px;
+    text-align: center;
+}
+
+.testModular .pullUpB a {
+    width: 90px;
+    height: 35px;
+    display: block;
+    border: #ccc solid 1px;
+    line-height: 35px;
+    position: relative;
+    top: 12px;
+    left: 270px;
+    border-radius: 50px;
+}
+
+.testModular .pullUpB a:hover {
+    background-color: rgb(95, 184, 120);
+    color: #fff;
+}
+
+/* 向上的箭头 */
+.up {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(135, 135, 135);
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    display: none;
+    z-index: 100;
+}
+
+.up #iconfontSecond {
+    color: rgb(135, 135, 135);
+    /* width: 50px;
+        height: 50px; */
+    line-height: 50px;
+    /* text-align: center; */
+    padding-left: 13.5px;
+
+}
+
+/* 底部 */
+.ft {
+    width: 100%;
+    height: 60px;
+    background-color: #393D49;
+    text-align: center;
+}
+
+/* .ft .all {
+    width: 100px;
+    height: 30px;
+    background-color: #ccc;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 3px;
+} */
+
+.ft {
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+
+}
+
+.ft .ftA {
+    /* height: 100px; */
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.ft .ftA .firstLi {
+    width: 222px;
+    height: 28px;
+    font-size: 20px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.ft ul {
+    padding-top: 20px;
+    width: 418px;
+    height: 37px;
+    font-size: 12px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(153, 153, 153, 1);
+    /* letter-spacing:100px; */
+}
+.ft .secondUl a{
+    color: rgba(153, 153, 153, 1);
+}
+.ft .secondUl a:hover{
+    color: rgba(153, 153, 153, 1);
+}
+.ft .firstUl li {
+    padding-bottom: 8px;
+}
+
+.ft .secondUl {
+    position: relative;
+    left: 85px;
+}
+
+.ft .secondUl li {
+    padding-bottom: 4px;
+}
+
+.ft .ftA .secondLi {
+    padding-bottom: 5px;
+}
+
+.ft .ftA .thirdLi {
+    width: 86px;
+    height: 28px;
+    font-size: 20px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(153, 153, 153, 1);
+    padding-bottom: 10px;
+}
+
+.ft ul li a {
+    color: #ccc;
+}
+
+.ft ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+.list-input{
+    transition: .3s;
+}
+.list-input:focus{
+    border:1px solid rgba(22,74,200,1);
+}
+
+.carousel-item{
+    border-radius: 10px;
+    height: 467px !important;
+}

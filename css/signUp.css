@@ -1,0 +1,364 @@
+body {
+    background-color: #F8FAFC;
+}
+
+
+.layui-nav .login-signUp {
+    margin-left: 800px;
+}
+
+.bd-signUp {
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 49px;
+}
+
+
+.bd-leftA,
+.bd-leftB {
+    width: 200px;
+    height: 50px;
+    /* background-color: blueviolet; */
+    line-height: 50px;
+    text-align: center;
+}
+
+
+
+.bd-leftAA {
+    overflow: hidden;
+}
+
+.bd-leftA .bd-leftAOne,
+.bd-leftB .bd-leftBOne {
+    width: 200px;
+    height: 50px;
+    background-color: #393D49;
+}
+
+.bd-leftA .bd-leftATwo {
+    width: 200px;
+    height: 100px;
+    background-color: #393D49;
+}
+
+#informationA {
+    color: #fff;
+}
+
+.bd-leftB .bd-leftBTwo {
+    width: 200px;
+    height: 50px;
+    background-color: #393D49;
+}
+
+
+
+.bdRightBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bdRightBoxA {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bdRightBoxB {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bdRightBox .selectSubject {
+    margin: 100px 300px;
+}
+
+.bdRightBox .selectSubject>span {
+    padding-left: 100px;
+    color: #393D49;
+}
+
+.bdRightBox .selectNext {
+    width: 1100px;
+    height: 200px;
+}
+
+.bdRightBoxB img {
+    margin-top: 139px;
+    width: 300px;
+    height: 250px;
+    padding-bottom: 40px;
+}
+
+.bdRightBoxB span {
+    font-size: 28px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(51, 55, 54, 1);
+    padding-top: 40px;
+}
+
+.bdRightBoxB span>a {
+    color: #164AC8;
+    text-decoration: underline;
+
+}
+
+.bd-right {
+    width: 1384px;
+    background-color: #F8FAFC;
+    height: 700px;
+    padding-bottom: 49px;
+}
+
+.bd-rightCTop {
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+}
+
+.bd-rightCTop>ul {
+    margin-top: 134px;
+    padding: 0 103px 100px;
+}
+
+.bd-rightCTop li {
+    padding-top: 20px;
+    width: 400px;
+    height: 33px;
+    font-size: 24px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 33px;
+    color: rgba(51, 55, 54, 1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bd-rightCTop .changeWidth {
+    left: 140px;
+    position: relative;
+}
+
+.bd-rightCTop .rightCTopPrice {
+    font-weight: bold;
+    color: rgba(22, 74, 200, 1);
+}
+
+.bd-rightCMiddle {
+    display: flex;
+}
+
+.bd-rightCMiddle .selectNextB,
+.bd-rightCMiddle .selectNextC {
+    display: block;
+    text-align: center;
+    line-height: 64px;
+    margin: 0 auto;
+    width: 200px;
+    height: 64px;
+    border: 1px solid rgba(22, 74, 200, 1);
+    opacity: 1;
+    border-radius: 4px;
+    font-size: 26px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(22, 74, 200, 1);
+    margin: 0 103px;
+}
+
+.bd-rightCMiddle .selectNextC {
+    background: rgba(22, 74, 200, 1);
+    box-shadow: 0px 0px 12px rgba(22, 74, 200, 0.35);
+    color: rgba(255, 255, 255, 1);
+}
+
+.bdRightBox .selectNext>a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 456px;
+    height: 64px;
+    background: rgba(22, 74, 200, 1);
+    box-shadow: 0px 0px 12px rgba(22, 74, 200, 0.35);
+    border-radius: 4px;
+    font-size: 26px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 64px;
+    color: rgba(255, 255, 255, 1);
+    transition: .3s;
+
+}
+
+.bdRightBox .selectNext>a:hover {
+    background: rgba(71, 118, 232, 1);
+
+}
+
+.bd-signUp .box .hide {
+    display: none;
+}
+
+.bd-right .orderTitle {
+    height: 53px;
+    margin-top: 78px;
+}
+
+
+
+.bd-rightBody {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    /* margin: 300px auto 0; */
+    position: absolute;
+    top: 350px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.bd-rightBottom {
+    height: 200px;
+    width: 1100px;
+    /* background-color: #393D49; */
+    position: absolute;
+    top: 500px;
+}
+
+.bd-rightBottom .layui-form {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.bd-rightBottom .layui-table-view {
+    /* border: #e6e6e6 solid 1px; */
+    border: none;
+}
+
+.bd-right .layui-form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.bd-signUp .layui-form .layui-input-block {
+    margin-left: 0;
+}
+
+.bd-signUp .layui-form label {
+    color: #393D49;
+}
+
+/* 考试时间地点 */
+.selectTime {
+    padding: 60px 0;
+    width: 1006px;
+    height: 388px;
+}
+
+/* .selectTime .choiceTP{
+    color: red;
+    font-size: 12px;
+    position: relative;
+    top: 4px;
+    left: 75px;
+    opacity: 0;
+} */
+.selectTimeTop {
+    margin-left: -83px;
+    display: none;
+}
+
+.selectTimeBottom>ul {
+    position: absolute;
+}
+
+.selectTimeBottom .selectUlB {
+    position: absolute;
+    left: 503px;
+    top: -1px;
+    height: 388px;
+    background-color: #fff;
+    display: none;
+}
+
+.selectTimeBottom>ul>li>p {
+    width: 503px;
+    height: 50px;
+    background: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 50px;
+    color: rgba(51, 55, 54, 1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.selectUlB>li {
+    width: 503px;
+    height: 50px;
+    background: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 50px;
+    color: rgba(51, 55, 54, 1);
+    text-align: center;
+    cursor: pointer;
+}
+
+#selectInput {
+    background-color: #fff;
+    width: 382px;
+    padding: 8px 8px 8px 10px;
+    border: 1px solid #393D49;
+    border-radius: 3px;
+}
+
+
+.signUpTopA {
+    width: 152px;
+    height: 53px;
+    font-size: 38px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    line-height: 53px;
+    color: rgba(51, 55, 54, 1);
+}
+
+.signUpTopB>img {
+    width: 10px;
+    height: 19px;
+    padding: 0 16px;
+    margin-top: -17px;
+}
+
+.signUpTestName {
+    /* width:591px; */
+    height: 53px;
+    font-size: 38px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 53px;
+    color: rgba(51, 55, 54, 1);
+}
+
+.signUpImg {
+    width: 10px;
+    height: 19px;
+    position: relative;
+    left: 94px;
+    opacity: 0;
+}

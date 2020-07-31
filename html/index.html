@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
+    <script src="../js/vue.js"></script>
+    <script src="../layui-v2.5.6/layui/layui.js"></script>
+</head>
+<style>
+    .layui-input:focus {
+        border: 1px solid rgba(22, 74, 200, 1) !important;
+    }
+
+    .layui-input {
+        font-size:19px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color:rgba(144,147,153,1);
+        background: rgba(248, 250, 252, 1);
+        margin-bottom: 40px;
+        text-indent: 22px;
+        width:340px;
+        height:56px;
+        border:1px solid rgba(192,196,204,1);
+        border-radius:4px;
+    }
+    .layui-laydate .layui-this {
+    background-color:rgba(22, 74, 200, 1) !important;
+    color: #fff!important;
+}
+</style>
+
+<body>
+    <div id="test">
+        {{message}}
+    </div>
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input list-input listInputH" id="test1" placeholder="请选择">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var test = new Vue({
+            el: '#test',
+            data: {
+                message: 'Hello Vue!!'
+            }
+        })
+
+
+        layui.use('laydate', function () {
+            var laydate = layui.laydate;
+
+            //常规用法
+            laydate.render({
+                elem: '#test1'
+            });
+            //初始赋值
+            laydate.render({
+                elem: '#test19',
+                value: '1989-10-14',
+                isInitValue: true
+            });
+
+            //选中后的回调
+            laydate.render({
+                elem: '#test20',
+                done: function (value, date) {
+                    layer.alert('你选择的日期是：' + value + '<br>获得的对象是' + JSON.stringify(date));
+                }
+            });
+
+            //日期切换的回调
+            laydate.render({
+                elem: '#test21',
+                change: function (value, date) {
+                    layer.msg('你选择的日期是：' + value + '<br><br>获得的对象是' + JSON.stringify(date));
+                }
+            });
+            //不出现底部栏
+            laydate.render({
+                elem: '#test22',
+                showBottom: false
+            });
+
+            //只出现确定按钮
+            laydate.render({
+                elem: '#test23',
+                btns: ['confirm']
+            });
+
+            //自定义事件
+            laydate.render({
+                elem: '#test24',
+                trigger: 'mousedown'
+            });
+
+            //点我触发
+            laydate.render({
+                elem: '#test25',
+                eventElem: '#test25-1',
+                trigger: 'click'
+            });
+
+            //双击我触发
+            lay('#test26-1').on('dblclick', function () {
+                laydate.render({
+                    elem: '#test26',
+                    show: true,
+                    closeStop: '#test26-1'
+                });
+            });
+
+            //日期只读
+            laydate.render({
+                elem: '#test27',
+                trigger: 'click'
+            });
+
+            //非input元素
+            laydate.render({
+                elem: '#test28'
+            });
+
+            //墨绿主题
+            laydate.render({
+                elem: '#test29',
+                theme: 'molv'
+            });
+
+            //自定义颜色
+            laydate.render({
+                elem: '#test30',
+                theme: '#393D49'
+            });
+
+            //格子主题
+            laydate.render({
+                elem: '#test31',
+                theme: 'grid'
+            });
+
+
+            //直接嵌套显示
+            laydate.render({
+                elem: '#test-n1',
+                position: 'static'
+            });
+            laydate.render({
+                elem: '#test-n2',
+                position: 'static',
+                lang: 'en'
+            });
+            laydate.render({
+                elem: '#test-n3',
+                type: 'month',
+                position: 'static'
+            });
+            laydate.render({
+                elem: '#test-n4',
+                type: 'time',
+                position: 'static'
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考试报名系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
+</head>
+<style>
+    body {
+        background: rgba(248, 250, 252, 1);
+    }
+    .registerBody{
+        height: 760px;
+        width: 1380px;
+        margin: 78px auto 0;
+        padding-top: 80px;
+    }
+    .registerBodyTop{
+        width:152px;
+        height:53px;
+        font-size:38px;
+        font-family:PingFang SC;
+        font-weight:bold;
+        line-height:53px;
+        color:rgba(51,55,54,1);
+    }
+    .registerBodyMiddle,
+    .registerBodyBottom{
+        /* background-color: aqua; */
+        margin: 87px auto 0;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hide{
+        display: none;
+        
+    }
+    .list-input{
+        width:456px;
+        height:64px;
+        border:1px solid rgba(233,233,233,1);
+        border-radius:4px;
+        text-indent: 20px;
+        font-size:19px;
+        font-family:PingFang SC;
+        font-weight:400;
+        line-height:19px;
+        color:rgba(144,147,153,1);
+        margin-bottom: 30px;
+    }
+    #registerBtn,
+    #registerBtnA
+    {
+        width:456px;
+        height:64px;
+        background:rgba(22,74,200,1);
+        box-shadow:0px 0px 12px rgba(22,74,200,0.35);
+        text-align: center;
+        border-radius:4px;
+    }
+    #registerBtn>a,
+    #registerBtnA>a{
+        font-size:26px;
+        font-family:PingFang SC;
+        font-weight:400;
+        line-height:64px;
+        color:rgba(255,255,255,1);
+    }
+    #canvasA {
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        width: 143px;
+        height: 50px;
+        position: absolute;
+        top: 305px;
+        left: 1011px;
+    }
+    .btnSendCode{
+        display: block;
+        width: 100px;
+        text-align: right;
+        background-color: rgba(0, 0, 0, 0.01);
+        color: rgba(22, 74, 200, 1);
+        font-size: 18px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        position: absolute;
+        left: 1055px;
+        top: 510px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .codeFalseD,
+    .codeFalseE,
+    .codeFalseF {
+        color: red;
+        font-size: 10px;
+        position: absolute;
+        width: 140px;
+        opacity: 0;
+        left: 730px;
+        top: 370px;
+    }
+    .codeFalseE,
+    .codeFalseF{
+        top: 560px;
+    }
+    .ft{
+        /* position: fixed; */
+    }
+</style>
+<body>
+    <!-- 导航栏 -->
+    <div class="top">
+        <ul class="layui-nav">
+            <a href="login.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
+            <li class="layui-nav-item">
+                <a href="login.html" class="">首页</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="login.html" class="">考试资讯</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="personal.html" class=" ">个人中心</a>
+            </li>
+            <li class="layui-nav-item login-homePage" id="loginD">
+                <a href="signIn.html" class=" ">登录</a>
+            </li>
+            <li class="layui-nav-item" id="loginZ">
+                <a href="javascript:;" class="login-homePageA">注册</a>
+            </li>
+            <li class="layui-nav-item exitA hide">
+                <a href="javascript:;" class="login-homePageC"></a>
+            </li>
+            <li class="layui-nav-item login-homePageB hide">
+                <a href="javascript:;" class="myname layui-nav-img"></a>
+            </li>
+        </ul>
+        <form class="layui-form div-bor navigationB" action="">
+            <!-- <div class="layui-form-item"> -->
+            <a href="allProject.html"><i class="iconfontA"><img src="../img/route1.png" alt=""></i></a>
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input"
+                value="英语">
+            <!-- </div> -->
+        </form>
+
+    </div>
+    <!-- 身体 -->
+    <div class="registerBody">
+        <span class="registerBodyTop">注册账号</span>
+        <div class="registerBodyMiddle">
+            <div class="login-input login-inputY">
+                <input type="text" placeholder="图片验证码" maxlength="5" class="list-input listInputI">
+                <div id="canvasA"></div>
+                <span class="codeFalseD">验证码错误，请重新输入</span>
+            </div>
+            <div class="login-input login-inputY">
+                <input class="list-input listInputH" type="text" placeholder="手机号">
+            </div>
+            <div class="login-input login-inputY">
+                <a id="code-btn" class="btnSendCode">获取</a>
+                <input type="text" placeholder="短信验证码" autocomplete="off" id="verificationCode"
+                    class="list-input list-inputI listInputJ" maxlength="6">
+                <span class="codeFalseE">验证码错误，请重新输入</span>
+            </div>
+            <div class="oneButton">
+                <div id="registerBtn">
+                    <a href="javascript:void(0);" class="registerNextA">下一步</a>
+                </div>
+            </div>
+        </div>
+        <div class="registerBodyBottom hide">
+            <div class="login-input login-inputY">
+                <input type="text" placeholder="用户名" maxlength="20" minlength="6" class="list-input listInputE">
+            </div>
+            <div class="login-input login-inputY">
+                <input class="list-input listInputF" type="password" placeholder="密码">
+            </div>
+            <div class="login-input login-inputY">
+                <input type="password" placeholder="再次输入密码" autocomplete="off"
+                    class="list-input listInputG">
+                <span class="codeFalseF">请输入相同的密码</span>
+            </div>
+            <div class="oneButton">
+                <div id="registerBtnA">
+                    <a href="javascript:void(0);" class="registerNextB registerNextBb">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="ftA">
+            <ul class="firstUl">
+                <li class="firstLi">OERP 在线考试报名平台</li>
+                <li class="secondLi">OERP 是一个专为考生服务的考试报名平台 旨在为考生提供一站式的报名服务</li>
+                <li>©2020 OERP&nbsp;&nbsp;&nbsp;&nbsp;渝ICP备18000683号-3</li>
+            </ul>
+            <ul class="secondUl">
+                <li class="thirdLi">友情链接</li>
+                <li><a href="http://www.neea.edu.cn/">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/">新东方网</a></li>
+                <li><a href="https://edu.sina.com.cn/">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/">沪江网校</a></li>
+            </ul>
+        </div>
+    </div>
+<script src="../layui-v2.5.6/layui/layui.js"></script>
+    <!-- <script src="../js/base64.js"></script> -->
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/myAjax.js"></script>
+    <script>
+        //眼睛
+        var flag = true;
+        $(".yanjingA").on("click", function () {
+            if (flag == true) {
+                flag = false;
+                $(this).css("color", "rgba(22, 74, 200, 1)");
+                $(".loginPassword").attr("type", "text");
+            } else {
+                flag = true;
+                $(this).css("color", "rgba(166,166,166,1)");
+                $(".loginPassword").attr("type", "password");
+            }
+        })
+
+        //AJAX--注册账号--获取图片验证码
+        $("#canvasA").on("click",function () {
+            myAjaxGet('https://oerp.juzibiji.top/api/v1/auth/captcha/image', 'get',
+                'application/x-www-form-urlencoded', 'false',
+                function (data, status) {
+                    var captchaImageBase64 = data.data.captchaImageBase64;
+                    var captchaId = data.data.captchaId;
+                    $("#canvasA").css("background-image", `url('${captchaImageBase64}')`);
+                    //AJAX--验证码登录--校验图片验证码
+                    $(".listInputI").on("blur", function () {
+                        var captcha = $(".listInputI").val();
+                        $.ajax({
+                            url: 'https://oerp.juzibiji.top/api/v1/auth/captcha/image/check',
+                            type: 'post',
+                            contentType: 'application/json',
+                            async: 'false',
+                            data: JSON.stringify({
+                                captchaId,
+                                captcha
+                            }),
+                            success: function (data, status) {
+                                $(".listInputI").css("border",
+                                    "rgba(233,233,233,1) solid 1px");
+                                $(".codeFalseD").css("opacity", "0");
+                                //AJAX--验证码登录--获取短信验证码
+                                $(".btnSendCode").on("click", function () {
+                                    var phoneNumber = $(".listInputH").val();
+                                    myAjax('https://oerp.juzibiji.top/api/v1/auth/captcha/sms',
+                                        'post', 'false', 'application/json',
+                                        JSON.stringify({
+                                            captchaId,
+                                            phoneNumber
+                                        }),
+                                        function (data, status) {
+                                            var count = 60;
+                                            var interval = setInterval(
+                                                function () {
+                                                    count--;
+                                                    $(".btnSendCode")
+                                                        .text("等待" +
+                                                            count + "秒"
+                                                        );
+                                                    $(".btnSendCode")
+                                                        .attr(
+                                                            "href",
+                                                            "javascript:void(0)"
+                                                            );
+                                                    $(".btnSendCode")
+                                                        .css("cursor",
+                                                            "not-allowed"
+                                                        );
+                                                    // console.log(count)
+                                                    if (count == 1) {
+                                                        $(".btnSendCode")
+                                                            .text(
+                                                                "获取");
+                                                        $(".btnSendCode")
+                                                            .removeAttr(
+                                                                "href",
+                                                                "javascript:void(0)"
+                                                            );
+                                                        $(".btnSendCode")
+                                                            .css(
+                                                                "cursor",
+                                                                "pointer"
+                                                            );
+                                                        window
+                                                            .clearInterval(
+                                                                interval
+                                                            );
+                                                    }
+                                                }, 1000);
+                                            //AJAX--验证码登录--校验短信验证码
+                                            $(".registerNextA").on("click",
+                                                function () {
+                                                    var captcha = $(
+                                                        ".listInputJ"
+                                                    ).val();
+                                                    myAjax('https://oerp.juzibiji.top/api/v1/auth/captcha/sms/check',
+                                                        'post',
+                                                        'false',
+                                                        'application/json',
+                                                        JSON
+                                                        .stringify({
+                                                            phoneNumber,
+                                                            captcha
+                                                        }),
+                                                        function (
+                                                            data,
+                                                            status
+                                                        ) {
+                                                            $(".codeFalseE")
+                                                                .css(
+                                                                    "opacity",
+                                                                    "0"
+                                                                );
+                                                            $(".listInputJ")
+                                                                .css(
+                                                                    "border",
+                                                                    "rgba(233,233,233,1) solid 1px"
+                                                                );
+                                                            $(".registerBodyMiddle").addClass("hide");
+                                                            $(".registerBodyBottom").removeClass("hide");
+
+                                                            //AJAX--注册--最后一步
+
+                                                            $(".registerNextB").on("click",function () {
+                                                                console.log(111)
+                                                                if ($(".listInputF").val() ==$(".listInputG").val()) {
+                                                                    $(".codeFalseF").css("opacity",0);
+                                                                    $(".listInputF").css("border","rgba(233,233,233,1) solid 1px");
+                                                                    $(".listInputG").css("border","rgba(233,233,233,1) solid 1px");
+                                                                    var password =$(".listInputF").val();
+                                                                    var username =$(".listInputE").val();
+                                                                    $.ajax({
+                                                                        url: 'https://oerp.juzibiji.top/api/v1/auth/registion',
+                                                                        type: 'post',
+                                                                        contentType: 'application/json',
+                                                                        async: 'false',
+                                                                        data: JSON.stringify({
+                                                                            phoneNumber,
+                                                                            username,
+                                                                            password
+                                                                        }),
+                                                                        success: function (data) {
+                                                                            window.location.href = 'login.html'
+                                                                        }
+                                                                    });
+                                                                }else{
+                                                                    $(".codeFalseF").css("opacity",1);
+                                                                    $(".listInputF").css("border","red solid 1px");
+                                                                    $(".listInputG").css("border","red solid 1px");
+                                                                }
+                                                            });
+
+                                                        },
+                                                        function () {
+                                                            $(".codeFalseE")
+                                                                .css(
+                                                                    "opacity",
+                                                                    "1"
+                                                                );
+                                                            $(".listInputJ")
+                                                                .css(
+                                                                    "border",
+                                                                    "red solid 1px"
+                                                                );
+                                                        });
+                                                });
+                                        });
+                                });
+                            },
+                            error: function () {
+                                $(".listInputI").css("border", "red solid 1px");
+                                $(".codeFalseD").css("opacity", "1");
+                            }
+                        });
+
+                    });
+                });
+ 
+        });
+        myAjaxGet('https://oerp.juzibiji.top/api/v1/auth/captcha/image', 'get',
+                'application/x-www-form-urlencoded', 'false',
+                function (data, status) {
+                    var captchaImageBase64 = data.data.captchaImageBase64;
+                    var captchaId = data.data.captchaId;
+                    $("#canvasA").css("background-image", `url('${captchaImageBase64}')`);
+                    //AJAX--验证码登录--校验图片验证码
+                    $(".listInputI").on("blur", function () {
+                        var captcha = $(".listInputI").val();
+                        $.ajax({
+                            url: 'https://oerp.juzibiji.top/api/v1/auth/captcha/image/check',
+                            type: 'post',
+                            contentType: 'application/json',
+                            async: 'false',
+                            data: JSON.stringify({
+                                captchaId,
+                                captcha
+                            }),
+                            success: function (data, status) {
+                                $(".listInputI").css("border",
+                                    "rgba(233,233,233,1) solid 1px");
+                                $(".codeFalseD").css("opacity", "0");
+                                //AJAX--验证码登录--获取短信验证码
+                                $(".btnSendCode").on("click", function () {
+                                    var phoneNumber = $(".listInputH").val();
+                                    myAjax('https://oerp.juzibiji.top/api/v1/auth/captcha/sms',
+                                        'post', 'false', 'application/json',
+                                        JSON.stringify({
+                                            captchaId,
+                                            phoneNumber
+                                        }),
+                                        function (data, status) {
+                                            var count = 60;
+                                            var interval = setInterval(
+                                                function () {
+                                                    count--;
+                                                    $(".btnSendCode")
+                                                        .text("等待" +
+                                                            count + "秒"
+                                                        );
+                                                    $(".btnSendCode")
+                                                        .attr(
+                                                            "href",
+                                                            "javascript:void(0)"
+                                                            );
+                                                    $(".btnSendCode")
+                                                        .css("cursor",
+                                                            "not-allowed"
+                                                        );
+                                                    // console.log(count)
+                                                    if (count == 1) {
+                                                        $(".btnSendCode")
+                                                            .text(
+                                                                "获取");
+                                                        $(".btnSendCode")
+                                                            .removeAttr(
+                                                                "href",
+                                                                "javascript:void(0)"
+                                                            );
+                                                        $(".btnSendCode")
+                                                            .css(
+                                                                "cursor",
+                                                                "pointer"
+                                                            );
+                                                        window
+                                                            .clearInterval(
+                                                                interval
+                                                            );
+                                                    }
+                                                }, 1000);
+                                            //AJAX--验证码登录--校验短信验证码
+                                            $(".registerNextA").on("click",
+                                                function () {
+                                                    var captcha = $(
+                                                        ".listInputJ"
+                                                    ).val();
+                                                    myAjax('https://oerp.juzibiji.top/api/v1/auth/captcha/sms/check',
+                                                        'post',
+                                                        'false',
+                                                        'application/json',
+                                                        JSON
+                                                        .stringify({
+                                                            phoneNumber,
+                                                            captcha
+                                                        }),
+                                                        function (
+                                                            data,
+                                                            status
+                                                        ) {
+                                                            $(".codeFalseE")
+                                                                .css(
+                                                                    "opacity",
+                                                                    "0"
+                                                                );
+                                                            $(".listInputJ")
+                                                                .css(
+                                                                    "border",
+                                                                    "rgba(233,233,233,1) solid 1px"
+                                                                );
+                                                            $(".registerBodyMiddle").addClass("hide");
+                                                            $(".registerBodyBottom").removeClass("hide");
+
+                                                            //AJAX--注册--最后一步
+
+                                                            $(".registerNextB").on("click",function () {
+                                                                if ($(".listInputF").val() ==$(".listInputG").val()) {
+                                                                    $(".codeFalseF").css("opacity",0);
+                                                                    $(".listInputF").css("border","rgba(233,233,233,1) solid 1px");
+                                                                    $(".listInputG").css("border","rgba(233,233,233,1) solid 1px");
+                                                                    var password =$(".listInputF").val();
+                                                                    var username =$(".listInputE").val();
+                                                                    $.ajax({
+                                                                        url: 'https://oerp.juzibiji.top/api/v1/auth/registion',
+                                                                        type: 'post',
+                                                                        contentType: 'application/json',
+                                                                        async: 'false',
+                                                                        data: JSON.stringify({
+                                                                            phoneNumber,
+                                                                            username,
+                                                                            password
+                                                                        }),
+                                                                        success: function (data) {
+                                                                            window.location.href="login.html"
+                                                                        }
+                                                                    });
+                                                                }else{
+                                                                    $(".codeFalseF").css("opacity",1);
+                                                                    $(".listInputF").css("border","red solid 1px");
+                                                                    $(".listInputG").css("border","red solid 1px");
+                                                                }
+                                                            });
+
+                                                        },
+                                                        function () {
+                                                            $(".codeFalseE")
+                                                                .css(
+                                                                    "opacity",
+                                                                    "1"
+                                                                );
+                                                            $(".listInputJ")
+                                                                .css(
+                                                                    "border",
+                                                                    "red solid 1px"
+                                                                );
+                                                        });
+                                                });
+                                        });
+                                });
+                            },
+                            error: function () {
+                                $(".listInputI").css("border", "red solid 1px");
+                                $(".codeFalseD").css("opacity", "1");
+                            }
+                        });
+
+                    });
+                });
+
+        
+        //搜索框查询
+        $(".div-bor .iconfontA").on("click", function () {
+            localStorage.setItem("keyword", $(".layui-input").val());
+        });
+
+    </script>
+</body>
+
+</html>

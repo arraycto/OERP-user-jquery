@@ -1,0 +1,60 @@
+body {
+    background-color: #F8FAFC
+}
+
+.login-allProject {
+    margin-left: 700px;
+}
+.body-allProject{
+    padding-top: 80px;
+}
+.body-allProject .hd-test{
+    height: 30px;
+    width: 1260px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size:30px;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(51,55,54,1);
+}
+.body-allProject .hd-mainA {
+    /* background-color: #393D49; */
+    height: 1400px;
+    /* padding-top: 50px; */
+    margin-top: 20px;
+}
+#demo1 .layui-laypage{
+    /* margin: 10px auto; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#demo1 .layui-laypage .layui-laypage-em{
+    background-color: #154cc8;
+}
+.top .layui-nav .successA{
+    margin-left: 770px;
+}
+.top .layui-nav .hide{
+    display: none;
+}
+.ft{
+    margin-top: 104px;
+}
+.layui-form{
+    left: 1317px;
+}
+.layui-nav .login-homePage,
+.layui-nav .login-homePageC{
+    left: 1780px;
+}
+.layui-nav .login-homePageA,
+.layui-nav .login-homePageB{
+    left: 1850px;
+}
+
+.layui-laypage>a,.layui-laypage>span{
+    height: 40px;
+    line-height: 40PX;
+}

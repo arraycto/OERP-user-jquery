@@ -1,0 +1,193 @@
+body {
+    background-color: rgba(248,250,252,1);
+}
+.PersonalCenter{
+    padding-top: 80px;
+}
+.personalRightA{
+    width: 1398px;
+    margin: 60px auto;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.personalTopA,
+.personalTopB{
+    width: 699px;
+    height: 160px;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.personalTopB{
+    justify-content: space-between;
+}
+.bigHead{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+}
+.smallA,
+.smallB{
+    margin-left: 30px;
+}
+.smallA img{
+    position: relative;
+    top: -4px;
+    left: -6px;
+}
+.smallB{
+    margin-top: 83px;
+}
+.smallB img{
+    position: relative;
+    top: -1px;
+    left: -10px;
+}
+.IDcardA>img{
+    margin-left: -4px;
+}
+.SchoolA>img{
+    margin-left: -4px;
+}
+.personalRightA li{
+    padding-bottom: 10px;
+}
+.UsernameA{
+    width:168px;
+    height:42px;
+    font-size:30px;
+    font-family:PingFang SC;
+    font-weight:bold;
+    line-height:42px;
+    color:rgba(51,55,54,1);
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.InforPassword{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.changeInfor{
+    width:119px;
+    height:50px;
+    border:1px solid rgba(163,208,253,1);
+    border-radius:4px;
+    text-align: center;
+}
+.changeInfor>a{
+    font-size:16px;
+    font-family:PingFang SC;
+    font-weight:400;
+    line-height:50px;
+    color:rgba(22,74,200,1);
+}
+.changePassword{
+    width:119px;
+    height:50px;
+    border:1px solid rgba(245,108,108,1);
+    border-radius:4px;
+    text-align: center;
+}
+.changePassword{
+    font-size:16px;
+    font-family:PingFang SC;
+    font-weight:400;
+    line-height:50px;
+    color:rgba(245,108,108,1);
+}
+
+.personalRightB{
+    /* background-color: aqua; */
+    width: 1336px;
+    height: 950px;
+    margin: 0 auto;
+}
+.myTest{
+    font-size:30px;
+    font-family:PingFang SC;
+    font-weight:bold;
+    line-height:42px;
+    color:rgba(51,55,54,1);
+}
+.personalRightBBottom {
+    margin-top: 50px;
+    height: 520px;
+    width: 1336px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* display: none; */
+}
+
+.personalRightBBottom .layui-form {
+    width: 1336px;
+}
+
+.personalRightBBottom .layui-table-view {
+    border: none;
+}
+
+.personalRightBBottom .layui-hide {
+    margin: 0 auto;
+}
+.layui-table-box{
+    left: -1252px;
+} 
+.layui-table{
+    background-color: rgba(248,250,252,1);
+}
+.layui-table thead tr{
+    background-color: rgba(248,250,252,1);
+}
+.layui-table-view .layui-table td,
+.layui-table-view .layui-table th{
+    border-right: none;
+    border-bottom: rgba(235,238,245,1) solid 1px;
+    font-size:19px;
+    font-family:PingFang SC;
+    font-weight:400;
+    color:rgba(96,98,102,1);
+    height: 60px;
+}
+.layui-table-page{
+    left: -1253px;
+    padding: 80px 7px 0 305px;
+    overflow: initial;
+    border-top: rgba(235,238,245,1) solid 1px;
+}
+.layui-table-page .layui-laypage input{
+    padding: 0;
+}
+.layui-table-page select{
+    height: 26px;
+    margin-top: -4px;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+    background-color: rgba(22,74,200,1);
+}
+.layui-table-page .layui-laypage span.layui-laypage-curr{
+    line-height: 32px;
+    height: 32px;
+}
+.layui-table-header{
+    border-bottom: rgba(235,238,245,1) solid 1px;
+}
+.layui-laypage-skip,
+.layui-laypage-count,
+.layui-laypage-limits{
+    display: none!important;
+}
+.layui-laypage{
+    margin-left: 240px!important;
+}
+.layui-laypage>a{
+    height: 32px!important;
+    line-height: 32px!important;
+    background-color: rgba(240,242,245,1)!important;
+}

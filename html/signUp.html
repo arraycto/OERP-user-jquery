@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考试报名系统</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/signUp.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="top">
+        <ul class="layui-nav">
+            <a href="login.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
+            <li class="layui-nav-item">
+                <a href="login.html" class="">首页</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="login.html" class="">考试资讯</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="personal.html" class=" ">个人中心</a>
+            </li>
+            <li class="layui-nav-item login-homePage hide" id="loginD">
+                <a href="signIn.html" class="">登录</a>
+            </li>
+            <li class="layui-nav-item  hide" id="loginZ">
+                <a href="register.html" class="login-homePageA">注册</a>
+            </li>
+            <li class="layui-nav-item exitA  hide">
+                <a href="javascript:;" class="login-homePageC"></a>
+            </li>
+            <li class="layui-nav-item login-homePageB hide">
+                <a href="javascript:;" class="myname layui-nav-img"></a>
+            </li>
+
+        </ul>
+        <form class="layui-form div-bor navigationB" action="">
+            <!-- <div class="layui-form-item"> -->
+            <a href="allProject.html"><i class="iconfontA"><img src="../img/route1.png" alt=""></i></a>
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input"
+                value="英语">
+            <!-- </div> -->
+        </form>
+    </div>
+    <!-- 身体 -->
+    <div class="bd-signUp">
+        <div class="box">
+            <div class="bd-right" id="informationB">
+                <div class="orderTitle">
+                    <span class="signUpTopA">考试报名</span>
+                    <span class="signUpTopB"><img src="../img/route3.png" alt=""></span>
+                    <span class="signUpTestName"></span>
+                </div>
+                <div class="bdRightBox">
+                    <div class="selectTime">
+                        <div class="selectTimeTop">
+                            <input type="text" name="" id="selectInput" placeholder="请选择考试的时间地点">
+                        </div>
+                        <div class="selectTimeBottom">
+                            <ul>
+                            </ul>
+                        </div>
+                        <!-- <span class="choiceTP">请选择正确的考试时间和地点</span> -->
+                    </div>
+                    <div class="selectNext"><a href="javascript:void(0);">确认报名</a></div>
+                </div>
+                <div class="bdRightBoxA hide">
+                    <div class="bd-rightCTop">
+                        <ul class="changeWidth">
+                            <li>姓名：<span class="signName"></span></li>
+                            <li>性别： <span class="signSex"></span></li>
+                            <li>学历： <span class="signEducation"></span></li>
+                            <li>电话： <span class="signPhone"></span></li>
+                            <!-- <li>学校： <span class="signSchool"></span></li> -->
+                        </ul>
+                        <ul>
+                            <li>考试地点：<span class="signPlace"></span></li>
+                            <li>考试时间：<span class="signTime"></span></li>
+                            <li>身份证号：<span class="signID"></span></li>
+                            <li class="rightCTopPrice">报名费用：<span class="signPrice"></span></li>
+                        </ul>
+                    </div>
+                    <div class="bd-rightCMiddle">
+                        <a href="login.html" class="selectNextB">取消</a><a href="javascript:void(0);"
+                            class="selectNextC">确认</a>
+                    </div>
+                </div>
+                <div class="bdRightBoxB hide">
+                    <img src="../img/messages.png" alt="">
+                    <span>报名成功，3s后<a href="personal.html">返回个人中心</a>......</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="ftA">
+            <ul class="firstUl">
+                <li class="firstLi">OERP 在线考试报名平台</li>
+                <li class="secondLi">OERP 是一个专为考生服务的考试报名平台 旨在为考生提供一站式的报名服务</li>
+                <li>©2020 OERP&nbsp;&nbsp;&nbsp;&nbsp;渝ICP备18000683号-3</li>
+            </ul>
+            <ul class="secondUl">
+                <li class="thirdLi">友情链接</li>
+                <li><a href="http://www.neea.edu.cn/">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/">新东方网</a></li>
+                <li><a href="https://edu.sina.com.cn/">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/">沪江网校</a></li>
+            </ul>
+        </div>
+    </div>
+<script src="../layui-v2.5.6/layui/layui.js"></script>
+    <script src="../js/myAjax.js"></script>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        // 导航栏
+        layui.use('element', function () {
+            var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+            //监听导航点击
+            element.on('nav(demo)', function (elem) {
+                //console.log(elem)
+                layer.msg(elem.text());
+            });
+        });
+
+        // 登录过一次以后，刷新页面后自动登录
+        if (localStorage.getItem("token")) {
+            var token = localStorage.getItem("token");
+            $.ajax({
+                url: 'https://oerp.juzibiji.top/api/v1/user',
+                headers: {
+                    Authorization: localStorage.getItem("token")
+                },
+                type: 'get',
+                contentType: 'application/x-www-form-urlencoded',
+                success: function (data, status) {
+                    $(".myname").css("backgroundImage", `url(${data.data.avatarUrl})`)
+                    $(".exitA").removeClass("hide");
+                    $(".login-homePageB").removeClass("hide");
+                    $(".signName").text(data.data.name);
+                    $(".signID").text(data.data.identityNo);
+                    $(".signPhone").text(data.data.phoneNumber);
+                    if (data.data.gender===0) {
+                        $(".signSex").text("女");
+                    }else{
+                        $(".signSex").text("男");
+                    }
+                    // $(".signSex").text(data.data.gender);
+                    $(".signSchool").text(data.data.school);
+                    $(".signEducation").text(data.data.education);
+
+                },
+                error: function (e) {
+                    console.log(e)
+
+                    console.log("系统错误，请稍后再试")
+                }
+            });
+        } else {
+            $("#loginD").removeClass("hide");
+            $("#loginZ").removeClass("hide");
+        }
+
+        //从localStrage中取出id并获取考试报名费
+        myAjax(`https://oerp.juzibiji.top/api/v1/user/exam/${localStorage.getItem("id")}`, 'get', 'true',
+            'application/x-www-form-urlencoded', {
+                id: localStorage.getItem("id")
+            },
+            function (data, stutas) {
+                $(".signPrice").text(data.data.price + "元");
+            },
+            function () {
+                console.log("系统错误，请稍后再试")
+            });
+
+        //搜索框查询
+        $(".div-bor .iconfont").on("click", function () {
+            localStorage.setItem("keyword", $(".layui-input").val());
+        });
+
+        //AJAX--考试报名
+        myAjaxHead(`https://oerp.juzibiji.top/api/v1/user/exam/apply/${localStorage.getItem("id")}`, 'get', 'true',
+            'application/x-www-form-urlencoded', {
+                Authorization: localStorage.getItem("token")
+            }, {
+                id: localStorage.getItem("id")
+            },
+            function (data, status) {
+                console.log(data)
+                $(".signUpTestName").text(data.data.title);
+                $(".signTest").text(data.data.title);
+                var timePlace = data.data.timePlace;
+                for (const key in timePlace) {
+                    $(".selectTimeBottom").children("ul").append(
+                        `<li><p>${getTime(key)}<img class='signUpImg' src='../img/route54.png'></p><ul class='selectUlB ${key}'></ul></li>`
+                        );
+                    for (let i = 0; i < timePlace[key].length; i++) {
+                        $(`.${key}`).append(`<li class="${timePlace[key][i].id}">` + timePlace[key][i].examPlace +
+                            "</li>");
+                    }
+                }
+                $(".selectUlB")[0].style.display = "inline";
+                console.log()
+                var startA = $(".selectTimeBottom").children("ul").children("li").children("p")[0].innerText;
+                var startB = $(".selectUlB").children("li")[0].innerText;
+                $("#selectInput").val(startA + "--" + startB);
+                $(".selectTimeBottom").children("ul").children("li").children("p").children("img")[0].style
+                    .opacity = "1"
+                $(".selectTimeBottom").children("ul").children("li").children("p")[0].style.color = "#164AC8";
+                $(".selectUlB").children("li")[0].style.color = "#164AC8";
+                //报名----考试时间地点
+
+                $(".selectTimeBottom>ul>li>p").click(function () {
+                    $(".selectUlB>li").css({
+                        "color": "rgba(51,55,54,1)",
+                    });
+                    $(this).css({
+                        "color": "#164AC8",
+                    }).parent("li").siblings().children("p").css({
+                        "color": "rgba(51,55,54,1)",
+                    });
+                    val = $(this).text();
+                    $("#selectInput").val(val);
+                    $(this).siblings("ul").show();
+                    $(this).parent("li").siblings().children("ul").hide();
+                    $(this).children(".signUpImg").stop().animate({
+                        opacity: 1
+                    }, 300)
+                    $(this).parent("li").siblings().children("p").children(".signUpImg").stop().animate({
+                        opacity: 0
+                    }, 300)
+                });
+                $(".selectUlB>li").click(function () {
+                    $(this).css({
+                        "color": "#164AC8",
+                    }).siblings().css({
+                        "color": "rgba(51,55,54,1)",
+                    });
+                    $("#selectInput").val(val + "--" + $(this).text());
+                    var examPlaceId = $(event.target).attr("class");
+                    $(".selectNext").on("click", function () {
+                        var time = $("#selectInput").val().split("--")[0];
+                        var place = $("#selectInput").val().split("--")[1];
+                        myAjaxHead('https://oerp.juzibiji.top/api/v1/user/apply', 'post', 'true',
+                            'application/json', {
+                                Authorization: localStorage.getItem("token")
+                            }, JSON.stringify({
+                                examPlaceId
+                            }),
+                            function (data, status) {
+                                $(".signTime").text(time);
+                                $(".signPlace").text(place);
+                                var applyId = data.data.id;
+                                if (time == 0 || place == 0) {
+                                    // $(".choiceTP").css("opacity", "1");
+                                    // $("#selectInput").css("border", "red solid 1px");
+                                } else {
+                                    // $(".choiceTP").css("opacity", "0");
+                                    // $("#selectInput").css("border", "#393D49 solid 1px");
+                                    $(".bdRightBox").addClass("hide");
+                                    $(".bdRightBoxA").removeClass("hide");
+                                    $(".selectNextC").on("click", function () {
+                                        myAjaxHead(
+                                            `https://oerp.juzibiji.top/api/v1/user/apply/pay/${applyId}`,
+                                            'post', 'true',
+                                            'application/x-www-form-urlencoded', {
+                                                Authorization: localStorage.getItem(
+                                                    "token")
+                                            }, {
+                                                applyId
+                                            },
+                                            function (data, status) {
+                                                $(".bdRightBoxA").addClass("hide");
+                                                $(".bdRightBoxB").removeClass("hide");
+                                                var countA=0;
+                                                var timeA= setInterval(function () {
+                                                    countA++;
+                                                    if (countA===3) {
+                                                        clearInterval(timeA);
+                                                        window.location.href="personal.html"
+                                                    }
+                                                },1000);
+                                            });
+                                    })
+                                }
+
+                            }, );
+                    });
+
+
+                });
+            });
+
+            
+
+        // function timestampToTime(timestamp) {
+        //     var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        //     var Y = date.getFullYear() + '-';
+        //     var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        //     var D = date.getDate() + ' ';
+        //     var h = date.getHours() + ':';
+        //     var m = date.getMinutes() + ':';
+        //     var s = date.getSeconds();
+        //     return Y + M + D + h + m + s;
+        // }
+
+
+        function getTime(nS) {
+            var date = new Date(parseInt(nS));
+            var year = date.getFullYear();
+            var mon = date.getMonth() + 1;
+            var day = date.getDate();
+            var hours = date.getHours();
+            var minu = date.getMinutes();
+            var sec = date.getSeconds();
+
+            return year + '年' + mon + '月' + day + '日' + hours + ':' + minu + ':' + sec;
+        }
+    </script>
+</body>
+
+</html>

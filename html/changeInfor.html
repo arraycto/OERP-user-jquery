@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考试报名系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
+</head>
+<style>
+    body {
+        background: rgba(248, 250, 252, 1);
+    }
+
+    .body-forgetPassword {
+        height: 820px;
+        width: 1384px;
+        margin: 60px auto 0;
+        padding-top: 80px;
+    }
+
+    .bodyTop {
+        width: 104px;
+        height: 37px;
+        font-family: PingFang SC;
+        font-weight: bold;
+        line-height: 37px;
+        color: rgba(51, 55, 54, 1);
+        font-size: 26px;
+    }
+
+    .body-forgetPasswordA {
+        width: 1384px;
+        height: 400px;
+        margin: 87px auto 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .login-input {
+        width: 506px;
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title {
+        margin-top: 15px;
+    }
+
+    .title>li {
+        font-size: 22px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 1);
+        margin-bottom: 77px;
+
+    }
+
+    .list-input {
+        font-size: 19px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: rgba(144, 147, 153, 1);
+        background: rgba(248, 250, 252, 1);
+        margin-bottom: 40px;
+        text-indent: 22px;
+        width: 340px;
+        height: 56px;
+        border: 1px solid rgba(192, 196, 204, 1);
+        border-radius: 4px;
+        transition: .3s;
+    }
+
+    /* .list-input:focus{
+        border:1px solid rgba(22,74,200,1);
+    } */
+    .selectSex {
+        position: relative;
+        top: -40px;
+        border-radius: 4px;
+        border: 1px solid rgba(192, 196, 204, 1);
+    }
+
+    .selectSex>li {
+        color: rgba(144, 147, 153, 1);
+        font-size: 19px;
+        text-indent: 22px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .signInButton {
+        box-shadow: 0px 0px 12px rgba(22, 74, 200, 0.35);
+        text-align: center;
+        transition: .3s;
+        width: 200px;
+        height: 75px;
+        background: rgba(22, 74, 200, 1);
+        border-radius: 100px;
+        margin: 27px auto 0;
+    }
+
+    .signInButton:hover {
+        background: rgba(71, 118, 232, 1);
+    }
+
+    .signInButton>a {
+        font-size: 32px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        line-height: 75px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .btnSendCode {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.01);
+        color: rgba(22, 74, 200, 1);
+        font-size: 18px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        position: absolute;
+        left: 702px;
+        top: 476px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .layui-input {
+        padding-left: 0px;
+    }
+
+    .layui-input:focus {
+        border: 1px solid rgba(22, 74, 200, 1) !important;
+    }
+
+    .layui-laydate .layui-this {
+        background-color: rgba(22, 74, 200, 1) !important;
+        color: #fff !important;
+    }
+
+    .layui-form-item {
+        margin-bottom: 55px;
+    }
+
+    .hide {
+        display: none;
+    }
+</style>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="top">
+        <ul class="layui-nav">
+            <a href="login.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
+            <li class="layui-nav-item">
+                <a href="login.html" class="">首页</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="login.html" class="">考试资讯</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="personal.html" class=" ">个人中心</a>
+            </li>
+            <li class="layui-nav-item login-homePage hide" id="loginD">
+                <a href="signIn.html" class="">登录</a>
+            </li>
+            <li class="layui-nav-item  hide" id="loginZ">
+                <a href="register.html" class="login-homePageA">注册</a>
+            </li>
+            <li class="layui-nav-item exitA  hide">
+                <a href="javascript:;" class="login-homePageC"></a>
+            </li>
+            <li class="layui-nav-item login-homePageB hide">
+                <a href="javascript:;" class="myname layui-nav-img"></a>
+            </li>
+
+        </ul>
+        <form class="layui-form div-bor navigationB" action="">
+            <!-- <div class="layui-form-item"> -->
+            <a href="allProject.html"><i class="iconfontA"><img src="../img/route1.png" alt=""></i></a>
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input"
+                value="英语">
+            <!-- </div> -->
+        </form>
+    </div>
+    <!-- 身体 -->
+    <div class="body-forgetPassword">
+        <span class="bodyTop">个人信息</span>
+        <div class="body-forgetPasswordA">
+            <div class="login-input">
+                <ul class="title">
+                    <li>姓名</li>
+                    <li>身份证</li>
+                    <li>手机号</li>
+                    <li>性别</li>
+                </ul>
+                <ul>
+                    <li class="Name"><input type="text" class="list-input listInputC"></li>
+                    <li class="IDcard"><input type="text" class="list-input listInputD"></li>
+                    <li class="Phone"><input type="text" disabled class="list-input listInputE"><a
+                            href="changePhoneNumber.html" class="btnSendCode">修改</a></li>
+                    <li class="Sex"><input type="text" class="list-input listInputF" value="请选择"></li>
+                    <ul class="selectSex hide">
+                        <li>请选择</li>
+                        <li>男</li>
+                        <li>女</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="login-input">
+                <ul class="title">
+                    <li>昵称</li>
+                    <li>生日</li>
+                    <li>学校</li>
+                    <li>学历</li>
+                </ul>
+                <ul>
+                    <li class="Nickname"><input type="text" class="list-input listInputG"></li>
+                    <li class="Birthday">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input list-input listInputH" id="test1"
+                                        placeholder="请选择">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="School"><input type="text" class="list-input listInputI"></li>
+                    <li class="Education"><input type="text" class="list-input listInputJ"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="signInButton signInButtonA">
+            <a href="javascript:void(0);">保存</a>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="ft">
+        <div class="ftA">
+            <ul class="firstUl">
+                <li class="firstLi">OERP 在线考试报名平台</li>
+                <li class="secondLi">OERP 是一个专为考生服务的考试报名平台 旨在为考生提供一站式的报名服务</li>
+                <li>©2020 OERP&nbsp;&nbsp;&nbsp;&nbsp;渝ICP备18000683号-3</li>
+            </ul>
+            <ul class="secondUl">
+                <li class="thirdLi">友情链接</li>
+                <li><a href="http://www.neea.edu.cn/">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/">新东方网</a></li>
+                <li><a href="https://edu.sina.com.cn/">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/">沪江网校</a></li>
+            </ul>
+        </div>
+    </div>
+<script src="../layui-v2.5.6/layui/layui.js"></script>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/myAjax.js"></script>
+    <script>
+        //下拉框--性别
+        $(function () {
+            var valueA;;
+            $(".listInputF").on("click", function () {
+                $(".selectSex").stop().slideDown(100);
+            });
+            $(".selectSex").children().on("click", function () {
+                $(this).css("backgroundColor", "rgba(22, 74, 200, 1)").siblings().css("backgroundColor",
+                    "rgba(248, 250, 252, 1)");
+                $(this).css("color", "rgba(255, 255, 255, 1)").siblings().css("color",
+                    "rgba(144,147,153,1)")
+                valueA = $(this).text();
+                $(".listInputF").val(valueA);
+                $(".selectSex").stop().slideUp(100);
+            });
+        });
+
+        // 登录过一次以后，刷新页面后自动登录
+
+        if (localStorage.getItem("token")) {
+            var token = localStorage.getItem("token");
+            $.ajax({
+                url: 'https://oerp.juzibiji.top/api/v1/user',
+                headers: {
+                    Authorization: localStorage.getItem("token")
+                },
+                type: 'get',
+                contentType: 'application/x-www-form-urlencoded',
+                success: function (data, status) {
+                    $(".myname").css("backgroundImage", `url(${data.data.avatarUrl})`)
+                    $(".exitA").removeClass("hide");
+                    $(".login-homePageB").removeClass("hide");
+                    $(".Phone").children().val(data.data.phoneNumber);
+                    $(".Name").children().val(data.data.name);
+                    $(".IDcard").children().val(data.data.identityNo);
+                    $(".Education").children().val(data.data.education);
+                    $(".School").children().val(data.data.school);
+                    $(".Nickname").children().val(data.data.nickname);
+                    $(".listInputH").val(getTime(data.data.birthday));
+                    // layui.use('laydate', function () {
+                    //     var laydate = layui.laydate;
+                    //     //常规用法
+                    //     laydate.render({
+                    //         elem: '#test1',
+                    //         value: $(".listInputH").val(getTime(data.data.birthday)),
+                    //         isInitValue:false
+                    //     });
+                    // });
+                    if (data.data.gender === 1) {
+                        $(".Sex").children().val("男");
+                    } else if (data.data.gender === 0) {
+                        $(".Sex").children().val("女");
+                    }
+                },
+                error: function (e) {
+                    console.log(e)
+
+                    console.log("系统错误，请稍后再试")
+                }
+            });
+        } else {
+            $("#loginD").removeClass("hide");
+            $("#loginZ").removeClass("hide");
+        }
+
+        //搜索框查询
+        $(".div-bor .iconfontA").on("click", function () {
+            localStorage.setItem("keyword", $(".layui-input").val());
+        });
+
+        //AJAX--修改个人信息
+        layui.use('laydate', function () {
+            var laydate = layui.laydate;
+            //常规用法
+            laydate.render({
+                elem: '#test1',
+                showBottom: false,
+                done: function (value, date) {
+                    // console.log(value)
+                    var birthdayTime = new Date(value);
+                    var birthday = birthdayTime.valueOf();
+                    //AJAX--修改个人信息
+                    $(".signInButtonA").on("click", function () {
+                        var token = localStorage.getItem("token");
+                        var name = $(".Name").children().val();
+                        var identityNo = $(".IDcard").children().val();
+                        var education = $(".Education").children().val();
+                        var gender;
+                        if ($(".Sex").children().val() === "男") {
+                            gender = 1;
+                        } else if ($(".Sex").children().val() === "女") {
+                            gender = 0;
+                        }
+                        var school = $(".School").children().val();
+                        var nickname = $(".Nickname").children().val();
+                        var phoneNumber = $(".Phone").children().val();
+                        // console.log(birthday)
+                        $.ajax({
+                            url: 'https://oerp.juzibiji.top/api/v1/user',
+                            type: 'put',
+                            async: 'true',
+                            headers: {
+                                Authorization: localStorage.getItem("token")
+                            },
+                            contentType: 'application/json',
+                            data: JSON.stringify({
+                                name,
+                                identityNo,
+                                gender,
+                                education,
+                                school,
+                                nickname,
+                                birthday
+                            }),
+                            success: function (data, status) {
+                                window.location.href = "personal.html";
+                            },
+                            error: function () {
+                                console.log("系统出错，请稍后再试")
+                            }
+                        });
+                    });
+
+                }
+            });
+        });
+
+        async function getTime(nS) {
+            let result 
+            await layui.use('util',function(){
+                return layui.util.toDateString(nS,'yyyy年MM月dd日 HH:mm:ss')
+            }).then(result=>{
+                nS=result
+            })
+            return nS
+            console.log('result',resu)
+            return result
+            var date = new Date(parseInt(nS));
+            var year = date.getFullYear();
+            var mon = date.getMonth() + 1;
+            if (mon<=9) {
+                mon="0"+"mon"
+            }
+            var day = date.getDate();
+            if (day<=9) {
+                day="0"+"day"
+            }
+            var hours = date.getHours();
+            var minu = date.getMinutes();
+            var sec = date.getSeconds();
+
+            return year + '-' + mon + '-' + day;
+        }
+    </script>
+</body>
+
+</html>
