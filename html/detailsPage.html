@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>考试报名系统</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
 </head>
 <style>
@@ -18,6 +18,7 @@
         justify-content: center;
         margin: 0 auto;
         text-align: center;
+        padding-top: 80px;
     }
     .body-detailsPageA span{
         height:70px;
@@ -64,21 +65,27 @@
     .body-detailsPageB{
         font-size: 16px !important;
     } 
+    .ft{
+        position: fixed;
+        bottom: 0;
+    }.box1{
+        right: 85px;
+    }
 </style>
 
 <body>
     <!-- 导航栏 -->
     <div class="top">
         <ul class="layui-nav">
-            <a href="login.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
+            <a href="index.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
             <li class="layui-nav-item">
-                <a href="login.html" class="">首页</a>
+                <a href="index.html" class="">首页</a>
             </li>
             <li class="layui-nav-item">
-                <a href="login.html" class="">考试资讯</a>
+                <a href="allProject.html" class="">考试资讯</a>
             </li>
-            <li class="layui-nav-item">
-                <a href="personal.html" class=" ">个人中心</a>
+            <li class="layui-nav-item loginPersonal hide">
+                <a href="personal.html"  class="">个人中心</a>
             </li>
             <li class="layui-nav-item login-homePage hide" id="loginD">
                 <a href="signIn.html" class="">登录</a>
@@ -97,10 +104,16 @@
         <form class="layui-form div-bor navigationB" action="">
             <!-- <div class="layui-form-item"> -->
             <a href="allProject.html"><i class="iconfontA"><img src="../img/route1.png" alt=""></i></a>
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder=""
-                class="layui-input" value="英语">
+            <input type="text" name="title" lay-verify="title" autocomplete="off"
+                class="layui-input" placeholder="英语">
             <!-- </div> -->
         </form>
+    </div>
+    <!-- 退出登录 -->
+    <div class="box1">
+        <div class="inner-box1"></div>
+        <div class="innerTop"><img src="../img/route0.png" alt=""><a class="loginPersonal" href="personal.html">个人中心</a></div>
+        <div class="innerBottom"><img src="../img/route87.png" alt=""><a class="loginExit" href="javascript:viod(0)">退出登陆</a></div>
     </div>
     <!-- 身体 -->
     <div class="body-detailsPageA">
@@ -121,12 +134,12 @@
             </ul>
             <ul class="secondUl">
                 <li class="thirdLi">友情链接</li>
-                <li><a href="http://www.neea.edu.cn/">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/">新东方网</a></li>
-                <li><a href="https://edu.sina.com.cn/">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/">沪江网校</a></li>
+                <li><a href="http://www.neea.edu.cn/" target="_blank">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/" target="_blank">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/" target="_blank">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/" target="_blank">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/" target="_blank">新东方网</a></li>
+                <li><a href="https://edu.sina.com.cn/" target="_blank">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/" target="_blank">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/" target="_blank">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/" target="_blank">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/" target="_blank">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/" target="_blank">沪江网校</a></li>
             </ul>
         </div>
     </div>
-<script src="../layui-v2.5.6/layui/layui.js"></script>
+    <script src="../layui-v2.5.6/layui/layui.js"></script>
     <script src="../js/myAjax.js"></script>
     <script src="../js/jquery-1.12.4.js"></script>
     <script>
@@ -159,6 +172,8 @@
                     $(".login-homePageB").removeClass("hide");
                     // $(".signUpA").css("cursor","pointer");
                     $(".signUpA").attr("href","signUp.html");
+            $(".loginPersonal").removeClass("hide")
+
                 },
                 error: function (e) {
                     console.log(e)
@@ -171,6 +186,7 @@
             $("#loginZ").removeClass("hide");
             // $(".signUpA").css("cursor","not-allowed");
             $(".signUpA").attr("href","signIn.html");
+            $(".loginPersonal").attr("href","signIn.html")
         }
 
         //搜索框查询
@@ -190,6 +206,33 @@
         },function(){
             console.log("系统错误，请稍后再试")
         });
+
+        //退出登录
+        var flag=true;
+        sessionStorage.setItem('avatarModelShowFlag',false)
+        $(".myname").on("click",event=>{
+            let flag = sessionStorage.getItem('avatarModelShowFlag')
+            // console.log('flag',flag)
+            event.stopPropagation(); 
+            if (flag==='true') {
+                flag=false
+            $(".box1").stop().fadeOut(100);
+            }else{
+                flag=true
+            $(".box1").stop().fadeIn(100);
+            } 
+
+            sessionStorage.setItem('avatarModelShowFlag',flag)
+        });
+        $("body").on("click",function () {
+            console.log('body click')
+            $(".box1").stop().fadeOut(100);
+            sessionStorage.setItem('avatarModelShowFlag',false)
+        })
+        $(".loginExit").on("click",function () {
+            localStorage.removeItem("token");
+            location.href="index.html"
+        })
 
         
     </script>

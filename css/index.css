@@ -12,7 +12,7 @@ label {
 }
 
 input {
-    height: 40px ;
+    height: 40px;
 }
 
 body {
@@ -122,6 +122,7 @@ body {
 .icon-daohangshouye:before {
     content: "\e605";
 }
+
 /* 眼睛 */
 .icon-yanjing:before {
     content: "\e6ce";
@@ -262,10 +263,6 @@ input {
 
 }
 
-.div-bor .iconfontA img:hover {
-    /* color:  rgb(95, 184, 120); */
-}
-
 .layui-nav .layui-nav-item a:hover {
     color: #154cc8;
 }
@@ -386,7 +383,7 @@ input {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    
+
 }
 
 .btnSendCodeA:hover,
@@ -517,13 +514,13 @@ input {
 .hd-mainA {
     margin-top: 50px;
     width: 1400px;
-    height: 1000px;
+    height: 800px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     /* justify-content: space-around; */
     justify-content: space-between;
-
+    padding-bottom: 50px;
 }
 
 /* .hd-mainA .pullUpFrame {
@@ -546,36 +543,37 @@ input {
     border-radius: 3px;
 }
 
-.hd-mainA .testModular:hover {
-    /* box-shadow: 0 0 10px rgba(153, 153, 153, 0.3); */
-}
-
 .hd-mainA .testModular img {
     width: 311px;
     height: 171px;
 }
-
+.hd-mainA .testModular img[src=""],img:not([src]){
+    opacity:0;
+}
 .hd-mainA .testModular .pullUpA {
     height: 144px;
     width: 311px;
 }
 
 .hd-mainA .pullUppA {
-    padding-left: 20px;
+    padding-left: 10px;
     width: 301px;
     height: 40px;
     font-size: 20px;
+    margin-top: 10px;
     font-family: PingFang SC;
     font-weight: bold;
     line-height: 28px;
     color: rgba(51, 55, 54, 1);
 }
-.loginbox{
+
+.loginbox {
     width: 311px;
     height: 20px;
     display: flex;
     justify-content: space-between;
 }
+
 .hd-mainA .pullUpA .loginPrice {
     height: 20px;
     font-size: 14px;
@@ -583,7 +581,7 @@ input {
     font-weight: 400;
     line-height: 20px;
     color: rgba(102, 102, 102, 1);
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .hd-mainA .pullUpA .logini {
@@ -718,12 +716,15 @@ input {
     color: rgba(153, 153, 153, 1);
     /* letter-spacing:100px; */
 }
-.ft .secondUl a{
+
+.ft .secondUl a {
     color: rgba(153, 153, 153, 1);
 }
-.ft .secondUl a:hover{
+
+.ft .secondUl a:hover {
     color: rgba(153, 153, 153, 1);
 }
+
 .ft .firstUl li {
     padding-bottom: 8px;
 }
@@ -759,14 +760,68 @@ input {
 .ft ul li a:hover {
     color: rgb(255, 255, 255);
 }
-.list-input{
+
+.list-input {
     transition: .3s;
 }
-.list-input:focus{
-    border:1px solid rgba(22,74,200,1);
+
+.list-input:focus {
+    border: 1px solid rgba(22, 74, 200, 1);
 }
 
-.carousel-item{
+.carousel-item {
     border-radius: 10px;
     height: 467px !important;
+}
+
+.box1 {
+    position: fixed;
+    width: 121px;
+    height: 90px;
+    background-color: rgba(255,255,255,1);
+    right: 66px;
+    top: 95px;
+    z-index: 9999;
+    border-radius: 4px;
+    box-shadow:0px 0px 6px rgba(0,0,0,0.05);
+    display: none;
+}
+.box1 img{
+    width: 15px;
+    height: 15px;
+    margin-top: -2px;
+}
+.inner-box1 {
+    width: 25px;
+    height: 10px;
+    background-color: rgba(255,255,255,1);
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 67%;
+    box-shadow:0px 0px 6px rgba(0,0,0,0.05);
+    /* top: -2%; */
+}
+
+.innerTop,
+.innerBottom {
+    height: 45px;
+    width: 66%;
+    background-color: rgba(255,255,255,1);
+    margin: 0 auto;
+}
+
+.innerBottom {
+    border-top: rgba(233,233,233,1) solid 1px;
+}
+.innerTop>a,
+.innerBottom>a {
+    font-size:14px;
+    font-family:PingFang SC;
+    font-weight:400;
+    line-height:45px;
+    color:rgba(51,55,54,1);
+    margin-left: 8px;
+}
+.hide{
+    display: none;
 }

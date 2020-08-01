@@ -1,174 +1,412 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>考试报名系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
-    <script src="../js/vue.js"></script>
-    <script src="../layui-v2.5.6/layui/layui.js"></script>
 </head>
 <style>
-    .layui-input:focus {
-        border: 1px solid rgba(22, 74, 200, 1) !important;
-    }
 
-    .layui-input {
-        font-size:19px;
-        font-family: PingFang SC;
-        font-weight: 400;
-        color:rgba(144,147,153,1);
-        background: rgba(248, 250, 252, 1);
-        margin-bottom: 40px;
-        text-indent: 22px;
-        width:340px;
-        height:56px;
-        border:1px solid rgba(192,196,204,1);
-        border-radius:4px;
-    }
-    .layui-laydate .layui-this {
-    background-color:rgba(22, 74, 200, 1) !important;
-    color: #fff!important;
-}
 </style>
 
 <body>
-    <div id="test">
-        {{message}}
-    </div>
-    <div class="layui-form">
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <div class="layui-input-inline">
-                    <input type="text" class="layui-input list-input listInputH" id="test1" placeholder="请选择">
+    <div class="max">
+        <!-- 导航栏 -->
+        <div class="top">
+            <ul class="layui-nav">
+                <a href="login.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);" class="">首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="allProject.html" class="">考试资讯</a>
+                </li>
+                <li class="layui-nav-item loginPersonal hide">
+                    <a href="personal.html" class="">个人中心</a>
+                </li>
+                <li class="layui-nav-item login-homePage hide" id="loginD">
+                    <a href="signIn.html" class="">登录</a>
+                </li>
+                <li class="layui-nav-item  hide" id="loginZ">
+                    <a href="register.html" class="login-homePageA">注册</a>
+                </li>
+                <li class="layui-nav-item exitA  hide">
+                    <a href="javascript:;" class="login-homePageC"></a>
+                </li>
+                <li class="layui-nav-item login-homePageB hide">
+                    <a href="javascript:;" class="myname layui-nav-img"></a>
+                </li>
+                
+            </ul>
+            <form class="layui-form div-bor navigationB" action="">
+                <!-- <div class="layui-form-item"> -->
+                <a href="allProject.html"><i class="iconfontA"><img src="../img/route1.png" alt=""></i></a>
+                <input type="text" name="title" lay-verify="title" autocomplete="off"
+                    class="layui-input" placeholder="英语">
+                <!-- </div> -->
+            </form>
+        </div>
+        <!-- 退出登录 -->
+        <div class="box1">
+            <div class="inner-box1"></div>
+            <div class="innerTop"><img src="../img/route0.png" alt=""><a class="loginPersonal" href="personal.html">个人中心</a></div>
+            <div class="innerBottom"><img src="../img/route87.png" alt=""><a class="loginExit" href="javascript:viod(0)">退出登陆</a></div>
+        </div>
+        <!-- 头部 -->
+        <div class="hdA">
+
+        </div>
+        <div class="hd">
+            <!-- 轮播图 -->
+            <div class="layui-carousel" id="test10">
+                <div class="carousel-item" carousel-item="">
+                    <div><img src="https://img.juzibiji.top/20200731191948.png"></div>
+                    <div><img src="https://img.juzibiji.top/20200731191915.png"></div>
+                    <div><img src="https://img.juzibiji.top/20200731191722.png"></div>
+                    <div><img src="https://img.juzibiji.top/20200731191401.png"></div>
+                    <div><img src="https://img.juzibiji.top/20200731191244.png"></div>
+                </div>
+            </div>
+            <!-- 相关考试  -->
+            <div class="hd-test">
+                <span>近期考试</span>
+                <span><a href="allProject.html" class="emptyKeyword">查看更多</a><img class="route3"
+                        src="../img/route3.png"></span>
+            </div>
+            <div class="hd-mainA">
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="testModular">
+                    <a href="detailsPage.html" target="_blank">
+                        <img alt="" class="allProjectImg">
+                        <div class="pullUpA">
+                            <p class="pullUppA allProjectTopA"></p>
+                            <div class="loginbox">
+                                <span class="loginPrice"></span>
+                                <i class="logini"><img src="../img/route2.png" alt="">123</i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
+        <!-- 底部 -->
+        <div class="ft">
+            <div class="ftA">
+                <ul class="firstUl">
+                    <li class="firstLi">OERP 在线考试报名平台</li>
+                    <li class="secondLi">OERP 是一个专为考生服务的考试报名平台 旨在为考生提供一站式的报名服务</li>
+                    <li>©2020 OERP&nbsp;&nbsp;&nbsp;&nbsp;渝ICP备18000683号-3</li>
+                </ul>
+                <ul class="secondUl">
+                    <li class="thirdLi">友情链接</li>
+                    <li><a href="http://www.neea.edu.cn/" target="_blank">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/" target="_blank">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/" target="_blank">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/" target="_blank">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/" target="_blank">新东方网</a></li>
+                    <li><a href="https://edu.sina.com.cn/" target="_blank">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/" target="_blank">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/" target="_blank">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/" target="_blank">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/" target="_blank">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/" target="_blank">沪江网校</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="up"><span class="icon-xiangshang iconfont" id="iconfontSecond"></span></div>
     </div>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/layui/2.5.6/layui.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/layui/2.5.6/layui.all.min.js"></script>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/myAjax.js"></script>
     <script>
-        var test = new Vue({
-            el: '#test',
-            data: {
-                message: 'Hello Vue!!'
-            }
-        })
 
-
-        layui.use('laydate', function () {
-            var laydate = layui.laydate;
-
-            //常规用法
-            laydate.render({
-                elem: '#test1'
+        $(function () {
+            $(".phoneLoginA").on("click", function () {
+                $(this).css("backgroundColor", "rgb(95, 184, 120)");
+                $(".codeLoginA").css("backgroundColor", "#fff");
+                //   $(".phoneLoginB").removeClass("hide");
+                //   $(".codeLoginB").addClass("hide");
             });
-            //初始赋值
-            laydate.render({
-                elem: '#test19',
-                value: '1989-10-14',
-                isInitValue: true
-            });
-
-            //选中后的回调
-            laydate.render({
-                elem: '#test20',
-                done: function (value, date) {
-                    layer.alert('你选择的日期是：' + value + '<br>获得的对象是' + JSON.stringify(date));
-                }
-            });
-
-            //日期切换的回调
-            laydate.render({
-                elem: '#test21',
-                change: function (value, date) {
-                    layer.msg('你选择的日期是：' + value + '<br><br>获得的对象是' + JSON.stringify(date));
-                }
-            });
-            //不出现底部栏
-            laydate.render({
-                elem: '#test22',
-                showBottom: false
-            });
-
-            //只出现确定按钮
-            laydate.render({
-                elem: '#test23',
-                btns: ['confirm']
-            });
-
-            //自定义事件
-            laydate.render({
-                elem: '#test24',
-                trigger: 'mousedown'
-            });
-
-            //点我触发
-            laydate.render({
-                elem: '#test25',
-                eventElem: '#test25-1',
-                trigger: 'click'
-            });
-
-            //双击我触发
-            lay('#test26-1').on('dblclick', function () {
-                laydate.render({
-                    elem: '#test26',
-                    show: true,
-                    closeStop: '#test26-1'
-                });
-            });
-
-            //日期只读
-            laydate.render({
-                elem: '#test27',
-                trigger: 'click'
-            });
-
-            //非input元素
-            laydate.render({
-                elem: '#test28'
-            });
-
-            //墨绿主题
-            laydate.render({
-                elem: '#test29',
-                theme: 'molv'
-            });
-
-            //自定义颜色
-            laydate.render({
-                elem: '#test30',
-                theme: '#393D49'
-            });
-
-            //格子主题
-            laydate.render({
-                elem: '#test31',
-                theme: 'grid'
-            });
-
-
-            //直接嵌套显示
-            laydate.render({
-                elem: '#test-n1',
-                position: 'static'
-            });
-            laydate.render({
-                elem: '#test-n2',
-                position: 'static',
-                lang: 'en'
-            });
-            laydate.render({
-                elem: '#test-n3',
-                type: 'month',
-                position: 'static'
-            });
-            laydate.render({
-                elem: '#test-n4',
-                type: 'time',
-                position: 'static'
+            $(".codeLoginA").on("click", function () {
+                $(this).css("backgroundColor", "rgb(95, 184, 120)");
+                $(".phoneLoginA").css("backgroundColor", "#fff");
+                //   $(".codeLoginB").removeClass("hide");
+                //   $(".phoneLoginB").addClass("hide");
             });
         });
+
+        //轮播图
+        layui.use(['carousel', 'form'], function () {
+            var carousel = layui.carousel,
+                form = layui.form;
+            //图片轮播
+            carousel.render({
+                elem: '#test10',
+                width: '100%',
+                height: '600px',
+                interval: 3000
+            });
+            //事件
+            carousel.on('change(test4)', function (res) {
+                console.log(res)
+            });
+            var $ = layui.$,
+                active = {
+                    set: function (othis) {
+                        var THIS = 'layui-bg-normal',
+                            key = othis.data('key'),
+                            options = {};
+                        othis.css('background-color', '#5FB878').siblings().removeAttr('style');
+                        options[key] = othis.data('value');
+                        ins3.reload(options);
+                    }
+                };
+
+            //其它示例
+            $('.demoTest .layui-btn').on('click', function () {
+                var othis = $(this),
+                    type = othis.data('type');
+                active[type] ? active[type].call(this, othis) : '';
+            });
+        });
+        $(function () {
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 500) {
+                    $(".up").stop().fadeIn(500);
+                } else {
+                    $(".up").stop().fadeOut(500);
+                }
+            });
+            $(".up").on("click", function () {
+                $(window).scrollTop(0);
+            });
+        });
+
+
+        // 登录过一次以后，刷新页面后自动登录
+
+        if (localStorage.getItem("token")) {
+            var token = localStorage.getItem("token");
+            $.ajax({
+                url: 'https://oerp.juzibiji.top/api/v1/user',
+                headers: {
+                    Authorization: localStorage.getItem("token")
+                },
+                type: 'get',
+                contentType: 'application/x-www-form-urlencoded',
+                success: function (data, status) {
+                    $(".myname").css("backgroundImage",`url(${data.data.avatarUrl})`)
+                    $(".exitA").removeClass("hide");
+                    $(".login-homePageB").removeClass("hide");
+            $(".loginPersonal").removeClass("hide")
+
+                },
+                error: function (e) {
+                    console.log(e)
+
+                    console.log("系统错误，请稍后再试")
+                }
+            });
+        }else{
+            $("#loginD").removeClass("hide");
+            $("#loginZ").removeClass("hide");
+        }
+
+        //搜索框查询
+        $(".div-bor .iconfontA").on("click", function () {
+            localStorage.setItem("keyword", $(".layui-input").val());
+        });
+
+
+        // headers: {'Authorization': token}
+        //进入页面自动获取首页的考试简要信息
+        $.ajax({
+            url: 'https://oerp.juzibiji.top/api/v1/user/exam',
+            type: 'get',
+            async: 'true',
+            contentType: 'application/x-www-form-urlencoded',
+            data: {
+                pageOn: 1,
+                pageSize: 12
+            },
+            success: function (data, status) {
+                for (let i = 0; i < 12; i++) {
+                    $(".allProjectImg")[i].src = data.data.records[i].imageUrl;
+                    $(".allProjectImg").siblings("div").children("p")[i].innerText = data.data.records[
+                        i].title;
+                    $(".loginPrice")[i].innerText = "￥" + data
+                        .data.records[i].price;
+                    // 点击了解详情获取考试id并存入localStorage中
+                    $(".testModular")[i].onclick = function () {
+                        localStorage.setItem("id", "");
+                        localStorage.setItem("id", data.data.records[i].id);
+                    };
+                }
+            },
+            error: function () {
+                console.log("系统错误，请稍后再试")
+            }
+        });
+
+        
+        //点击全部 清空keyword
+        $(".emptyKeyword").on("click", function () {
+            localStorage.setItem("keyword", "");
+        });
+
+        //退出登录
+        var flag=true;
+        sessionStorage.setItem('avatarModelShowFlag',false)
+        $(".myname").on("click",event=>{
+            let flag = sessionStorage.getItem('avatarModelShowFlag')
+            // console.log('flag',flag)
+            event.stopPropagation(); 
+            if (flag==='true') {
+                flag=false
+            $(".box1").stop().fadeOut(100);
+            }else{
+                flag=true
+            $(".box1").stop().fadeIn(100);
+            } 
+
+            sessionStorage.setItem('avatarModelShowFlag',flag)
+        });
+        $("body").on("click",function () {
+            console.log('body click')
+            $(".box1").stop().fadeOut(100);
+            sessionStorage.setItem('avatarModelShowFlag',false)
+        })
+        $(".loginExit").on("click",function () {
+            localStorage.removeItem("token");
+            location.reload();
+        })
     </script>
 </body>
 

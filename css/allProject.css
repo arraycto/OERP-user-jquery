@@ -42,17 +42,6 @@ body {
 .ft{
     margin-top: 104px;
 }
-.layui-form{
-    left: 1317px;
-}
-.layui-nav .login-homePage,
-.layui-nav .login-homePageC{
-    left: 1780px;
-}
-.layui-nav .login-homePageA,
-.layui-nav .login-homePageB{
-    left: 1850px;
-}
 
 .layui-laypage>a,.layui-laypage>span{
     height: 40px;

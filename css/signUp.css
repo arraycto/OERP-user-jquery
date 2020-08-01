@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     padding-bottom: 49px;
+    padding-top: 73px;
 }
 
 
@@ -361,4 +362,10 @@ body {
     position: relative;
     left: 94px;
     opacity: 0;
+}
+.ft{
+    position: fixed;
+    bottom: 0;
+}.box1{
+    right: 85px;
 }

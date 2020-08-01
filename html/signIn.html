@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>考试报名系统</title>
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
 </head>
 <style>
@@ -264,21 +264,25 @@
     .codeFalseE{
         top: 260px;
     }
+    .ft{
+        position: fixed;
+        bottom: 0;
+    }
 </style>
 <body>
     <!-- 导航栏 -->
     <div class="top">
         <ul class="layui-nav">
-            <a href="login.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
+            <a href="index.html"><img src="../img/LOGO.png" alt="" class="navlogo"></a>
             <li class="layui-nav-item">
-                <a href="login.html" class="">首页</a>
+                <a href="index.html" class="">首页</a>
             </li>
             <li class="layui-nav-item">
-                <a href="login.html" class="">考试资讯</a>
+                <a href="allProject.html" class="">考试资讯</a>
             </li>
-            <li class="layui-nav-item">
-                <a href="personal.html" class=" ">个人中心</a>
-            </li>
+            <!-- <li class="layui-nav-item">
+                <a href="javascript:void(0)" class=" ">个人中心</a>
+            </li> -->
             <li class="layui-nav-item login-homePage" id="loginD">
                 <a href="signIn.html" class=" ">登录</a>
             </li>
@@ -295,8 +299,7 @@
         <form class="layui-form div-bor navigationB" action="">
             <!-- <div class="layui-form-item"> -->
             <a href="allProject.html"><i class="iconfontA"><img src="../img/route1.png" alt=""></i></a>
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input"
-                value="英语">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="英语" class="layui-input">
             <!-- </div> -->
         </form>
 
@@ -382,11 +385,12 @@
             </ul>
             <ul class="secondUl">
                 <li class="thirdLi">友情链接</li>
-                <li><a href="http://www.neea.edu.cn/">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/">新东方网</a></li>
-                <li><a href="https://edu.sina.com.cn/">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/">沪江网校</a></li>
+                <li><a href="http://www.neea.edu.cn/" target="_blank">中国考试教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cpta.com.cn/" target="_blank">中国人事考试网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.offcn.com/" target="_blank">中公教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.aliyun.com/" target="_blank">开发者社区</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.xdf.cn/" target="_blank">新东方网</a></li>
+                <li><a href="https://edu.sina.com.cn/" target="_blank">新浪教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.exam8.com/" target="_blank">考试吧</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://juzibiji.top/" target="_blank">桔子笔记</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.51test.net/" target="_blank">无忧考</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.naixuejiaoyu.com/" target="_blank">奈学教育</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://class.hujiang.com/" target="_blank">沪江网校</a></li>
             </ul>
         </div>
     </div>
+
 <!-- <script src="../js/base64.js"></script> -->
     <script src="../js/jquery-1.12.4.js"></script>
     <script src="../js/myAjax.js"></script>
@@ -446,7 +450,7 @@
                     $("#telephoneA").css("border", "rgba(233,233,233,1) solid 1px");
                     $("#passwordA").css("border", "rgba(233,233,233,1) solid 1px");
                     $(".codeFalseC").css("opacity", "0");
-                    window.location.href = 'login.html'
+                    window.location.href = 'index.html'
                 },
                 error(result) {
                     // console.log(result.responseJSON);
@@ -580,7 +584,7 @@
                                                                     window
                                                                         .location
                                                                         .href =
-                                                                        'login.html'
+                                                                        'index.html'
                                                                 }
                                                             );
                                                         },
@@ -732,7 +736,7 @@
                                                                     window
                                                                         .location
                                                                         .href =
-                                                                        'login.html'
+                                                                        'index.html'
                                                                 }
                                                             );
                                                         },
